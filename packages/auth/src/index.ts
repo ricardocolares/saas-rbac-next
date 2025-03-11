@@ -14,6 +14,10 @@ import { organizationSubject } from './subjects/organization'
 import { inviteSubject } from './subjects/invite'
 import { billingSubject } from './subjects/billing'
 
+export * from './models/user'
+export * from './models/user'
+export * from './models/project'
+
 // type AppAbilities = UserSubject | ProjectSubject | ['manage', 'all']
 
 const appAbilitiesSchema = z.union([
