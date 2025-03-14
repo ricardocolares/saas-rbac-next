@@ -3,5 +3,7 @@
     {
       "mode": "auto"
     }
-  ]
+  ],
+  "explorer.fileNesting.enabled": true,
+  "accessibility.windowTitleOptimized": false
 }
