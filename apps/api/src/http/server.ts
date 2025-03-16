@@ -13,6 +13,9 @@ import { authenticateWithPassword } from './routes/auth/authenticate-with-passwo
 import fastifyJwt from '@fastify/jwt'
 import { getProfile } from './routes/auth/get-profile'
 import { errorHandler } from './error-handler'
+import { requestPasswordRecover } from './routes/auth/request-password-recovery'
+import { passwordReset } from './routes/auth/reset-password'
+import { authenticateWithGithub } from './routes/auth/authenticate-with-github'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -45,7 +48,10 @@ app.register(fastifyCors)
 
 app.register(createAccount)
 app.register(authenticateWithPassword)
+app.register(authenticateWithGithub)
 app.register(getProfile)
+app.register(requestPasswordRecover)
+app.register(passwordReset)
 
 app.listen({ port: 3333 }).then(() => {
   console.log('Server is running on port 3333')
