@@ -17,6 +17,7 @@ import { billingSubject } from './subjects/billing'
 export * from './models/user'
 export * from './models/user'
 export * from './models/project'
+export * from './roles'
 
 // type AppAbilities = UserSubject | ProjectSubject | ['manage', 'all']
 
